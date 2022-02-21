@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 293033910}
-  PercentageComplete: {fileID: 0}
+  PercentageComplete: {fileID: 1849007851}
   MapStartingPoint: {fileID: 730170189}
   MapEndingPoint: {fileID: 591358807}
 --- !u!1 &1291965152
