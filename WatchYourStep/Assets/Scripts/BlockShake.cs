@@ -17,18 +17,31 @@ public class BlockShake : MonoBehaviour
     [Range(0f, 0.1f)]
     public float _delayBetweenShakes = 0f;
 
+
+    public float shakeTimer;
+    public float maxShakeTimer;
+
     private void Awake()
     {
         _startPos = transform.position;
-
-        StopAllCoroutines();
-        StartCoroutine(Shake());
+        maxShakeTimer = 7;
     }
 
     private void OnValidate()
     {
         if (_delayBetweenShakes > _time)
             _delayBetweenShakes = _time;
+    }
+    private void Update()
+    {
+        if(shakeTimer < maxShakeTimer)
+        {
+            shakeTimer += Time.deltaTime;
+        } else if(shakeTimer >= maxShakeTimer)
+        {
+            shakeTimer = 0;
+            StartCoroutine(Shake());
+        }
     }
 
     private IEnumerator Shake()
@@ -54,5 +67,6 @@ public class BlockShake : MonoBehaviour
         }
 
         transform.position = _startPos;
+        StopCoroutine(Shake());
     }
 }
