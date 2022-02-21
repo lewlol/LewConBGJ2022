@@ -5,5 +5,5 @@ using UnityEngine;
 public class SharedSavedStuff
 {
 
-    public static float ;
+    public static float lsdjfbixdfyubf;
 }
