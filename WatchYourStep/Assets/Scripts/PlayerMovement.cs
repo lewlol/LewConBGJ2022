@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
         maxJumpSpeed = 15.0f;
         minSideSpeed = -10.0f;
         maxSideSpeed = 10.0f;
-        DontDestroyOnLoad(this);
     }
 
     private void Update()

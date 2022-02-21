@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SharedSavedStuff
 {
+<<<<<<< Updated upstream
 
     public static float lsdjfbixdfyubf;
+=======
+>>>>>>> Stashed changes
 }
