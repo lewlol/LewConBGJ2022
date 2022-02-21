@@ -8,6 +8,8 @@ public class MapCompletionProgress : MonoBehaviour
 
     public Transform MapStartingPoint;
     public Transform MapEndingPoint;
+
+    public float percentcomplete;
  
 
     private float distanceToGoal;
@@ -15,18 +17,20 @@ public class MapCompletionProgress : MonoBehaviour
     private void Start()
     {
         distanceToGoal = MapEndingPoint.position.y - MapStartingPoint.position.y;
-        PercentageComplete.text = "this is my text";
-        
     }
 
     private void Update()
     {
-        float currentPlayerDistance = MapEndingPoint.position.x - Player.transform.position.y;
+        float currentPlayerDistance = MapEndingPoint.position.y - Player.transform.position.y;
         float progress = 1.0f - (currentPlayerDistance / distanceToGoal);
 
-        if (Player.transform.position.x > MapEndingPoint.position.y)
+        if (Player.transform.position.y > MapEndingPoint.position.y)
             progress = 1f;
-        PercentageComplete.text ="dkshfvjhdbfipsb";
+
+        percentcomplete = progress;
+
+        PercentageComplete.text = (percentcomplete * 100 ).ToString("F1") + ("%");
+        
 
     }
 }
