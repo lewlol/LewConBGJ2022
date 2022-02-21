@@ -89,7 +89,7 @@ public class BlockShake : MonoBehaviour
 
     void RandomNumber()
     {
-        rPitch = Random.Range(-3, 3);
+        rPitch = Random.Range(1, 3);
         audio.pitch = rPitch;
     }
 }
