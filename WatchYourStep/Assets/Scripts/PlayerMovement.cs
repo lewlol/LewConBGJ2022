@@ -79,6 +79,14 @@ public class PlayerMovement : MonoBehaviour
                     sideSpeed += 0.01f;
                 }
             }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                sideSpeed = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                sideSpeed = 0;
+            }
 
             var movement = Input.GetAxis("Horizontal");
             if (!Mathf.Approximately(0, movement))
