@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         maxJumpSpeed = 15.0f;
         minSideSpeed = -10.0f;
         maxSideSpeed = 10.0f;
+        DontDestroyOnLoad(this);
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (JumpSpeed < maxJumpSpeed)
                 {
-                    JumpSpeed += 0.02f;
+                    JumpSpeed += 0.03f;
                     sr.sprite = charge;
                 }
                 if (JumpSpeed >= maxJumpSpeed && resetSpeed == true)

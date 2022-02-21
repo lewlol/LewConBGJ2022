@@ -25,6 +25,8 @@ public class BlockShake : MonoBehaviour
     public AudioSource audio;
     public AudioClip laugh;
 
+    public float rPitch;
+
     private void Awake()
     {
         _startPos = transform.position;
@@ -79,8 +81,15 @@ public class BlockShake : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            RandomNumber();
             audio.clip = laugh;
             audio.Play();
         }
+    }
+
+    void RandomNumber()
+    {
+        rPitch = Random.Range(-3, 3);
+        audio.pitch = rPitch;
     }
 }
