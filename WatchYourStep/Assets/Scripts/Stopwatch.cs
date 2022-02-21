@@ -8,7 +8,7 @@ public class Stopwatch : MonoBehaviour
     public Text timerText;
     private float startTime;
     private bool finished = false;
-
+    public GameObject TIME;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +34,6 @@ public class Stopwatch : MonoBehaviour
     {
         finished = true;
         timerText.color = Color.yellow;
+
     }
 }
