@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainMenuFancy : MonoBehaviour
 {
+    public AudioSource intro;
     public AudioSource boom;
     public GameObject Watch;
     public GameObject Your;
@@ -23,18 +24,20 @@ public class MainMenuFancy : MonoBehaviour
 
     IEnumerator Menu()
     {
+        yield return new WaitForSeconds(0.5f);
         boom.Play();
         Watch.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
         boom.Play();
         Your.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
         boom.Play();
         Step.SetActive(true);
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(1f);
         start.SetActive(true);
         quit.SetActive(true);
-        
+        intro.Play();
+
 
 
     }
