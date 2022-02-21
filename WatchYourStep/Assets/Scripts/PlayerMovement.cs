@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Sprite jump;
     public Sprite charge;
+    public Sprite fall;
 
     public GameObject groundParticles;
 
@@ -72,6 +73,12 @@ public class PlayerMovement : MonoBehaviour
         if (!Mathf.Approximately(0, movement))
         {
             transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        }
+
+        //FallingSprite
+        if(gameObject.transform.rotation.z > 35)
+        {
+            sr.sprite = fall;
         }
 
     }
