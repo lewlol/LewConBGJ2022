@@ -21,6 +21,10 @@ public class BlockShake : MonoBehaviour
     public float shakeTimer;
     public float maxShakeTimer;
 
+
+    public AudioSource audio;
+    public AudioClip laugh;
+
     private void Awake()
     {
         _startPos = transform.position;
@@ -68,5 +72,15 @@ public class BlockShake : MonoBehaviour
 
         transform.position = _startPos;
         StopCoroutine(Shake());
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            audio.clip = laugh;
+            audio.Play();
+        }
     }
 }
