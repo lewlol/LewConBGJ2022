@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public static float maxSideSpeed;
     public static float maxJumpSpeed;
 
+    public AudioSource audio;
+
+    public AudioClip jumpSound;
+
     public static float jumpCount;
 
     public bool resetSpeed;
@@ -28,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        maxJumpSpeed = 10.0f;
+        maxJumpSpeed = 15.0f;
         minSideSpeed = -10.0f;
         maxSideSpeed = 10.0f;
     }
@@ -56,6 +60,10 @@ public class PlayerMovement : MonoBehaviour
                 sr.sprite = jump;
                 groundParticles.SetActive(false);
                 jumpCount += 1;
+
+
+                audio.clip = jumpSound;
+                audio.Play();
             }
             if (Input.GetKey(KeyCode.A))
             {
