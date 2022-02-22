@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (JumpSpeed < maxJumpSpeed)
                 {
-                    JumpSpeed += 0.05f;
+                    JumpSpeed += 0.07f;
                     sr.sprite = charge;
                 }
                 if (JumpSpeed >= maxJumpSpeed && resetSpeed == true)
@@ -69,14 +69,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (sideSpeed > minSideSpeed)
                 {
-                    sideSpeed -= 0.03f;
+                    sideSpeed -= 0.05f;
                 }
             }
             if (Input.GetKey(KeyCode.D))
             {
                 if (sideSpeed < maxSideSpeed)
                 {
-                    sideSpeed += 0.03f;
+                    sideSpeed += 0.05f;
                 }
             }
             if (Input.GetKeyDown(KeyCode.A))
