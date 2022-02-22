@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-
+    public GameObject pl;
     public Transform player;
     public Vector3 offset;
 
@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour
     }
     void Update()
     {
-        if(gameObject.transform.position.y < 165)
+        if (pl.transform.position.y < 166)
         {
             Vector3 position = transform.position;
             position.y = (player.position + offset).y;
