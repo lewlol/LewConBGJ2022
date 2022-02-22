@@ -1,14 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.UI;
 
 public class StopTimer : MonoBehaviour
 {
     public GameObject timer;
+    public Canvas barsandtings;
+    public Animator fade;
+    public GameObject fadeout;
+    public GameObject Congrats;
+    public GameObject Timetaken;
+    public GameObject JumpsDone;
+    public GameObject ExitScene;
+
+    IEnumerator Endsceneswag()
+    {
+        barsandtings.enabled = false;
+        timer.SendMessage("finish");
+        yield return new WaitForSeconds(1.5f);
+
+        fadeout.SetActive(true);
+        fade.SetBool("End", true);
+        yield return new WaitForSeconds(2f);
+
+        Congrats.SetActive(true);
+        yield return new WaitForSeconds(9f);
+        Timetaken.SetActive(true);
+        yield return new WaitForSeconds(5.5f);
+        JumpsDone.SetActive(true);
+        yield return new WaitForSeconds(7f);
+        ExitScene.SetActive(true);
+
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        timer.SendMessage("finish");
+      StartCoroutine(Endsceneswag());   
     }
 
 }
