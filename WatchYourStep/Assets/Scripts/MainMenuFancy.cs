@@ -10,7 +10,6 @@ public class MainMenuFancy : MonoBehaviour
     public GameObject Your;
     public GameObject Step;
     public GameObject start;
-    public GameObject quit; 
     
     void Start()
     {
@@ -18,7 +17,6 @@ public class MainMenuFancy : MonoBehaviour
         Your.SetActive(false);
         Step.SetActive(false);
         start.SetActive(false);
-        quit.SetActive(false);
         StartCoroutine(Menu());
     }
 
@@ -35,7 +33,6 @@ public class MainMenuFancy : MonoBehaviour
         Step.SetActive(true);
         yield return new WaitForSeconds(1f);
         start.SetActive(true);
-        quit.SetActive(true);
         intro.Play();
 
 
