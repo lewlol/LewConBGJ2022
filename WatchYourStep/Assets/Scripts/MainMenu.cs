@@ -22,13 +22,13 @@ public class MainMenu : MonoBehaviour
 
     public void EasyMode()
     {
-        anim.SetBool("ChangingScene", true);
-        StartCoroutine(ChangeToLevel());
+        Debug.Log("Enter In Easy Mode");
     }
     public void HardMode()
     {
+        Debug.Log("Enter In Hard Mode");
         anim.SetBool("ChangingScene", true);
-        SceneManager.LoadScene(2);
+        StartCoroutine(ChangeToLevel());
     }
 
     IEnumerator ChangeToLevel()
