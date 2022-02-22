@@ -7,16 +7,14 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
-    public AudioSource audio;
-    public AudioClip click;
-
     public GameObject playButton;
     public GameObject easyText;
     public GameObject hardText;
 
+    public Animator anim;
+
     public void Play()
     {
-        audio.Play();
         playButton.SetActive(false);
         easyText.SetActive(true);
         hardText.SetActive(true);
@@ -24,12 +22,18 @@ public class MainMenu : MonoBehaviour
 
     public void EasyMode()
     {
-        audio.Play();
-        SceneManager.LoadScene(2);
+        anim.SetBool("ChangingScene", true);
+        StartCoroutine(ChangeToLevel());
     }
     public void HardMode()
     {
-        audio.Play();
+        anim.SetBool("ChangingScene", true);
+        SceneManager.LoadScene(2);
+    }
+
+    IEnumerator ChangeToLevel()
+    {
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(2);
     }
 
