@@ -14,8 +14,11 @@ public class CameraFollow : MonoBehaviour
     }
     void Update()
     {
-        Vector3 position = transform.position;
-        position.y = (player.position + offset).y;
-        transform.position = position;
+        if(gameObject.transform.position.y < 165)
+        {
+            Vector3 position = transform.position;
+            position.y = (player.position + offset).y;
+            transform.position = position;
+        }
     }
 }
