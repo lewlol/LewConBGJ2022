@@ -107,6 +107,7 @@ MonoBehaviour:
   maxShakeTimer: 0
   audio: {fileID: 1708615878946241783}
   laugh: {fileID: 8300000, guid: 2fe829a1b930d6a49b0f5868d1c9f247, type: 3}
+  rPitch: 0
 --- !u!95 &69586965095286614
 Animator:
   serializedVersion: 4
@@ -236,7 +237,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0039682686, y: 0.0015873909}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -247,5 +248,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.93174595, y: 0.9428568}
   m_EdgeRadius: 0
