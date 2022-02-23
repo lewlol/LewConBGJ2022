@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class EndToMenu : MonoBehaviour
 {
-   public void endmenu()
+    private void Update()
     {
-        SceneManager.LoadScene(0);
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+            
+            
+
+        
     }
 }

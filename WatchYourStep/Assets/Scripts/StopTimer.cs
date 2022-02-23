@@ -22,12 +22,13 @@ public class StopTimer : MonoBehaviour
     public AudioClip explosion;
     public AudioSource Music;
     public GameObject notreal;
+    public GameObject endbutton;
 
 
 
     public void Start()
     {
-        
+        endbutton.SetActive(false); 
     }
 
     IEnumerator Endsceneswag()
@@ -82,7 +83,7 @@ public class StopTimer : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
        
         ExitScene.SetActive(true);
-        
+        endbutton.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
