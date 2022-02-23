@@ -19,18 +19,25 @@ public class StopTimer : MonoBehaviour
     public Animator crown;
     public SpriteRenderer crownobj;
     public GameObject explode;
+    public AudioClip explosion;
+    public AudioSource Music;
     IEnumerator Endsceneswag()
     {
         TotalJumps.text = ("You jumped a total of: " + PlayerMovement.jumpCount + " times during your run");
         Totaltime.text = ("You took " + Stopwatch.minutesfinal + ":" + Stopwatch.secondsfinal + " to reach the top of the tower");
 
-        AudioListener.pause = true;
+        Music.enabled = false;  
         barsandtings.enabled = false;
         timer.SendMessage("finish");
         yield return new WaitForSeconds(1.5f);
+        AudioSource audio = GetComponent<AudioSource>();
 
         crown.SetBool("Gameendanim", true);
+        audio.Play();
+        
         yield return new WaitForSeconds(2f);
+        audio.clip = explosion;
+        audio.Play();   
         crownobj.enabled = false;
         explode.SetActive(true);
 
