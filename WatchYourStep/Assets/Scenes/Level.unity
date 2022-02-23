@@ -787,7 +787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &216370356
 Transform:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216370355}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.01, y: -0.066223145, z: -3.69}
+  m_LocalPosition: {x: -0.01, y: -0.1499939, z: -3.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -890,7 +890,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -6935,6 +6935,9 @@ MonoBehaviour:
   ExitScene: {fileID: 1349979616}
   TotalJumps: {fileID: 1197474932}
   Totaltime: {fileID: 255394939}
+  crown: {fileID: 1562166675}
+  crownobj: {fileID: 1562166673}
+  explode: {fileID: 216370355}
 --- !u!1001 &746776824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9801,7 +9804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562166672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 167.07622, z: 0}
+  m_LocalPosition: {x: 0.02, y: 167.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27046,7 +27049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1744762248227053615, guid: a65c9c084ecd2884e8f0c2bd24d392e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3
+      value: 164
       objectReference: {fileID: 0}
     - target: {fileID: 1744762248227053615, guid: a65c9c084ecd2884e8f0c2bd24d392e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27115,7 +27118,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.2023315
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

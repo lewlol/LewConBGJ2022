@@ -16,7 +16,9 @@ public class StopTimer : MonoBehaviour
     public GameObject ExitScene;
     public Text TotalJumps;
     public Text Totaltime;
-
+    public Animator crown;
+    public SpriteRenderer crownobj;
+    public GameObject explode;
     IEnumerator Endsceneswag()
     {
         TotalJumps.text = ("You jumped a total of: " + PlayerMovement.jumpCount + " times during your run");
@@ -27,6 +29,13 @@ public class StopTimer : MonoBehaviour
         timer.SendMessage("finish");
         yield return new WaitForSeconds(1.5f);
 
+        crown.SetBool("Gameendanim", true);
+        yield return new WaitForSeconds(2f);
+        crownobj.enabled = false;
+        explode.SetActive(true);
+
+
+        yield return new WaitForSeconds(2);
         fadeout.SetActive(true);
         fade.SetBool("End", true);
         yield return new WaitForSeconds(2f);
