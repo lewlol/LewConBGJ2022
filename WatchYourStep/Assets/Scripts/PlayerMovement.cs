@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Sprite jump;
     public Sprite charge;
+    public Sprite fall;
 
     public GameObject groundParticles;
 
@@ -121,6 +122,14 @@ public class PlayerMovement : MonoBehaviour
         {
             resetSpeed = false;
             inAir = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "FB")
+        {
+            sr.sprite = fall;
         }
     }
 }
