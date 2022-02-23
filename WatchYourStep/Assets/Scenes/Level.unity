@@ -1945,6 +1945,8 @@ MonoBehaviour:
   Timetaken: {fileID: 255394937}
   JumpsDone: {fileID: 1197474930}
   ExitScene: {fileID: 1349979616}
+  TotalJumps: {fileID: 1197474932}
+  Totaltime: {fileID: 255394939}
 --- !u!1001 &746776824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16136,8 +16138,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Congratulations on reaching the top \nbut sadly some things are too good
-    to be real ..."
+  m_Text: 'Congratulations on reaching the top but
+
+    sadly some things are too
+    good to be real ...'
 --- !u!222 &1966397088
 CanvasRenderer:
   m_ObjectHideFlags: 0

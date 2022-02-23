@@ -14,9 +14,15 @@ public class StopTimer : MonoBehaviour
     public GameObject Timetaken;
     public GameObject JumpsDone;
     public GameObject ExitScene;
+    public Text TotalJumps;
+    public Text Totaltime;
 
     IEnumerator Endsceneswag()
     {
+        TotalJumps.text = ("You jumped a total of: " + PlayerMovement.jumpCount + " times during your run");
+        Totaltime.text = ("You took " + Stopwatch.minutesfinal + ":" + Stopwatch.secondsfinal + " to reach the top of the tower");
+
+
         barsandtings.enabled = false;
         timer.SendMessage("finish");
         yield return new WaitForSeconds(1.5f);
@@ -26,7 +32,7 @@ public class StopTimer : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         Congrats.SetActive(true);
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(9.3f);
         Timetaken.SetActive(true);
         yield return new WaitForSeconds(5.5f);
         JumpsDone.SetActive(true);

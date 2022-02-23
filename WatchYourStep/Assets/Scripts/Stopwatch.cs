@@ -9,6 +9,9 @@ public class Stopwatch : MonoBehaviour
     private float startTime;
     private bool finished = false;
     public GameObject TIME;
+    public static string minutesfinal;
+    public static string secondsfinal;  
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,13 +30,17 @@ public class Stopwatch : MonoBehaviour
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("F3");
 
-        timerText.text = minutes + ":" + seconds; 
+        timerText.text = minutes + ":" + seconds;
+        minutesfinal = minutes;
+        secondsfinal = seconds;
+        
     }
 
     void finish()
     {
         finished = true;
         timerText.color = Color.yellow;
+        
 
     }
 }
