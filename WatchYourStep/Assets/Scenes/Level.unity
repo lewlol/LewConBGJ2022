@@ -5722,6 +5722,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 1125148076}
   fall: {fileID: 21300000, guid: 40a5e9e53aff48c4191f6e8243bdae29, type: 3}
+  hitWall: {fileID: 8300000, guid: 3ce9278a71077bf4b9d3f65a38b1a7d4, type: 3}
+  audio: {fileID: 2076817873}
 --- !u!1 &243827118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7382,6 +7384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 1125148076}
   fall: {fileID: 21300000, guid: 40a5e9e53aff48c4191f6e8243bdae29, type: 3}
+  hitWall: {fileID: 8300000, guid: 3ce9278a71077bf4b9d3f65a38b1a7d4, type: 3}
+  audio: {fileID: 2076817873}
 --- !u!1 &835081861
 GameObject:
   m_ObjectHideFlags: 0

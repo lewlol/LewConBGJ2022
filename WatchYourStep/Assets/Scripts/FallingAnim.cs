@@ -6,6 +6,8 @@ public class FallingAnim : MonoBehaviour
 {
     public SpriteRenderer sr;
     public Sprite fall;
+    public AudioClip hitWall;
+    public AudioSource audio;
 
 
 
@@ -14,6 +16,8 @@ public class FallingAnim : MonoBehaviour
         if(collision.gameObject.tag == "Ground")
         {
             sr.sprite = fall;
+            audio.clip = hitWall;
+            audio.Play();
         }
     }
 }
