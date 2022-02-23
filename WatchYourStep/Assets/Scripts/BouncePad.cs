@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BouncePad : MonoBehaviour
 {
-    private float bounce = 10f;
+    private float bounce = 5f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
