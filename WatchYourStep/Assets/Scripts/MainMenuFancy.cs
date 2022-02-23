@@ -11,7 +11,7 @@ public class MainMenuFancy : MonoBehaviour
     public GameObject Step;
     public GameObject start;
     
-    void Start()
+    void Awake()
     {
         Watch.SetActive(false);
         Your.SetActive(false);
@@ -22,6 +22,7 @@ public class MainMenuFancy : MonoBehaviour
 
     IEnumerator Menu()
     {
+        Debug.Log("Obama Bin Swaggin!");
         yield return new WaitForSeconds(0.5f);
         boom.Play();
         Watch.SetActive(true);

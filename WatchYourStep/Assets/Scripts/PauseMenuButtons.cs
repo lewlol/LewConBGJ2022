@@ -13,7 +13,7 @@ public class PauseMenuButtons : MonoBehaviour
 
     public void mainmenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
 
