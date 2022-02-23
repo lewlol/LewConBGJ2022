@@ -34,7 +34,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator ChangeToLevel()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level");
     }
 
 }
