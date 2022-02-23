@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float MovementSpeed;
     public float JumpSpeed;
+    public AudioSource jump;
 
     public Rigidbody2D rb;
 
@@ -26,6 +27,8 @@ public class Movement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
+            
+            jump.Play();
             rb.AddForce(new Vector2(0, JumpSpeed), ForceMode2D.Impulse);
         }
     }
