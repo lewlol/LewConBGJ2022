@@ -22,6 +22,7 @@ public class StopTimer : MonoBehaviour
     public AudioClip explosion;
     public AudioSource Music;
     public GameObject notreal;
+    public GameObject typing;
     IEnumerator Endsceneswag()
     {
         TotalJumps.text = ("You jumped a total of: " + PlayerMovement.jumpCount + " times during your run");
@@ -51,8 +52,14 @@ public class StopTimer : MonoBehaviour
         fade.SetBool("End", true);
         yield return new WaitForSeconds(2f);
 
+        typing.SetActive(true);
         Congrats.SetActive(true);
         yield return new WaitForSeconds(9.3f);
+
+        yield return new WaitForSeconds(0.1f);
+        typing.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+
         Timetaken.SetActive(true);
         yield return new WaitForSeconds(5.5f);
         JumpsDone.SetActive(true);
