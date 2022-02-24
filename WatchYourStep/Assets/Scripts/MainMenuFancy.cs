@@ -13,6 +13,8 @@ public class MainMenuFancy : MonoBehaviour
     
     void Awake()
     {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
         Watch.SetActive(false);
         Your.SetActive(false);
         Step.SetActive(false);
