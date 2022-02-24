@@ -20,6 +20,7 @@ public class MainMenuFancy : MonoBehaviour
         Step.SetActive(false);
         start.SetActive(false);
         StartCoroutine(Menu());
+        Cursor.lockState = CursorLockMode.None;
     }
 
     IEnumerator Menu()
