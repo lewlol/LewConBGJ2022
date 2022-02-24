@@ -12050,6 +12050,7 @@ MonoBehaviour:
   anim: {fileID: 1181038185}
   text1: {fileID: 1561715764}
   text2: {fileID: 262165079}
+  menuplayer: {fileID: 0}
 --- !u!114 &2013809394
 MonoBehaviour:
   m_ObjectHideFlags: 0

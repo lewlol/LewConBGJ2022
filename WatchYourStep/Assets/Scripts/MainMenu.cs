@@ -13,12 +13,13 @@ public class MainMenu : MonoBehaviour
 
     public GameObject text1;
     public GameObject text2;
+    public GameObject menuplayer;
 
     public void Play()
     {
         anim.SetBool("ChangingScene", true);
         StartCoroutine(ChangeToLevel());
-
+        menuplayer.GetComponent<PlayerMovement>().enabled = false;
     }
 
     IEnumerator ChangeToLevel()
