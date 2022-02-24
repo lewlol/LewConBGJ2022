@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     {
         anim.SetBool("ChangingScene", true);
         StartCoroutine(ChangeToLevel());
+
     }
 
     IEnumerator ChangeToLevel()
