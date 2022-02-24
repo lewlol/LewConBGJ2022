@@ -64,9 +64,9 @@ public class StopTimer : MonoBehaviour
        yield return new WaitForSeconds(2f);
         notreal.SetActive(true);
 
-        yield return new WaitForSeconds(4f);
-        notreal.SetActive(false);
+        yield return new WaitForSeconds(5f);
         fadeout.SetActive(true);
+        notreal.SetActive(false);
         fade.SetBool("End", true);
         
         yield return new WaitForSeconds(2f);
