@@ -62,8 +62,10 @@ public class StopTimer : MonoBehaviour
         audio.Play();   
         crownobj.enabled = false;
         explode.SetActive(true);
+        GameObject varCamerashake = GameObject.FindWithTag("MainCamera");
+        varCamerashake.GetComponent<CameraShake>().enabled = true;
 
-       yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f);
         notreal.SetActive(true);
 
         yield return new WaitForSeconds(5f);

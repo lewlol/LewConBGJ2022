@@ -33696,6 +33696,7 @@ GameObject:
   - component: {fileID: 2067508284}
   - component: {fileID: 2067508283}
   - component: {fileID: 2067508285}
+  - component: {fileID: 2067508286}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -33862,6 +33863,22 @@ MonoBehaviour:
   pl: {fileID: 2076817872}
   player: {fileID: 2076817877}
   offset: {x: 0, y: 3, z: 0}
+--- !u!114 &2067508286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067508279}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbf88aa0be8e4845924dbe76bc6cdac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 0}
+  shakeDuration: 0.4
+  shakeAmount: 0.5
+  decreaseFactor: 1
 --- !u!1001 &2076817871
 PrefabInstance:
   m_ObjectHideFlags: 0
