@@ -23,12 +23,17 @@ public class StopTimer : MonoBehaviour
     public AudioSource Music;
     public GameObject notreal;
     public GameObject endbutton;
-
+    public Text coins;
 
 
     public void Start()
     {
         endbutton.SetActive(false); 
+    }
+
+    private void Update()
+    {
+        coins.text = ("Coins Collected:" + Collectable.coinscollected);
     }
 
     IEnumerator Endsceneswag()
