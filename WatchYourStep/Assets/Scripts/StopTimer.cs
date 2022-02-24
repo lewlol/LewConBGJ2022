@@ -13,6 +13,7 @@ public class StopTimer : MonoBehaviour
     public GameObject Congrats;
     public GameObject Timetaken;
     public GameObject JumpsDone;
+    public GameObject CoinsCollected;
     public GameObject ExitScene;
     public Text TotalJumps;
     public Text Totaltime;
@@ -24,6 +25,7 @@ public class StopTimer : MonoBehaviour
     public GameObject notreal;
     public GameObject endbutton;
     public Text coins;
+    public Text coinscollectedfinal;
 
 
     public void Start()
@@ -40,6 +42,7 @@ public class StopTimer : MonoBehaviour
     {
         TotalJumps.text = ("You jumped a total of: " + PlayerMovement.jumpCount + " times during your run");
         Totaltime.text = ("You took " + Stopwatch.minutesfinal + ":" + Stopwatch.secondsfinal + " to reach the top of the tower");
+        coinscollectedfinal.text = ("You collected: " + Collectable.coinscollected + "/5 Coins ");
 
         GameObject varGameObject = GameObject.FindWithTag("Player");
         varGameObject.GetComponent<PlayerMovement>().enabled = false;
@@ -57,36 +60,30 @@ public class StopTimer : MonoBehaviour
         audio.Play();   
         crownobj.enabled = false;
         explode.SetActive(true);
+
        yield return new WaitForSeconds(2f);
         notreal.SetActive(true);
 
-        yield return new WaitForSeconds(0.001f);
-
-
         yield return new WaitForSeconds(4f);
-       
         notreal.SetActive(false);
         fadeout.SetActive(true);
         fade.SetBool("End", true);
+        
         yield return new WaitForSeconds(2f);
-
         Congrats.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+
 
         yield return new WaitForSeconds(9.3f);
-
         Timetaken.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+       
 
         yield return new WaitForSeconds(5.5f);
-       
         JumpsDone.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
-        
-        yield return new WaitForSeconds(7f);
- 
-        yield return new WaitForSeconds(0.1f);
-       
+
+        yield return new WaitForSeconds(4.5f);
+        CoinsCollected.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
         ExitScene.SetActive(true);
         endbutton.SetActive(true);
     }
