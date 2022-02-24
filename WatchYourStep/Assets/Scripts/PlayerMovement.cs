@@ -102,19 +102,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            if (!resetSpeed)
-            {
-                JumpSpeed = 0;
-                sideSpeed = 0;
-                resetSpeed = true;
-            }
-            inAir = false;
-        }
-    }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -130,6 +117,20 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "FB")
         {
             sr.sprite = fall;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            if (!resetSpeed)
+            {
+                JumpSpeed = 0;
+                sideSpeed = 0;
+                resetSpeed = true;
+            }
+            inAir = false;
         }
     }
 }
