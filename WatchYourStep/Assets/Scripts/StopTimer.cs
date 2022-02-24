@@ -26,6 +26,7 @@ public class StopTimer : MonoBehaviour
     public GameObject endbutton;
     public Text coins;
     public Text coinscollectedfinal;
+    public GameObject pauseting;
 
 
     public void Start()
@@ -43,6 +44,7 @@ public class StopTimer : MonoBehaviour
         TotalJumps.text = ("You jumped a total of: " + PlayerMovement.jumpCount + " times during your run");
         Totaltime.text = ("You took " + Stopwatch.minutesfinal + ":" + Stopwatch.secondsfinal + " to reach the top of the tower");
         coinscollectedfinal.text = ("You collected: " + Collectable.coinscollected + "/5 Coins ");
+        pauseting.SetActive(false); 
 
         GameObject varGameObject = GameObject.FindWithTag("Player");
         varGameObject.GetComponent<PlayerMovement>().enabled = false;
