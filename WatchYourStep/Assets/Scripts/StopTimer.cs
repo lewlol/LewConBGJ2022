@@ -40,7 +40,7 @@ public class StopTimer : MonoBehaviour
 
     IEnumerator Endsceneswag()
     {
-        TotalJumps.text = ("You jumped : " + PlayerMovement.jumpCount + " times during " +"your run");
+        TotalJumps.text = ("You jumped a total of: " + PlayerMovement.jumpCount + " times during your run");
         Totaltime.text = ("You took " + Stopwatch.minutesfinal + ":" + Stopwatch.secondsfinal + " to reach the top of the tower");
         coinscollectedfinal.text = ("You collected: " + Collectable.coinscollected + "/5 Coins ");
 

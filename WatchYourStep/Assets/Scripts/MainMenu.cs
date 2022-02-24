@@ -13,11 +13,6 @@ public class MainMenu : MonoBehaviour
 
     public Animator anim;
 
-    private void Awake()
-    {
-        Time.timeScale = 1;
-        AudioListener.pause = false;
-    }
     public void Play()
     {
         playButton.SetActive(false);
