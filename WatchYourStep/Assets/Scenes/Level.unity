@@ -22232,8 +22232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -632, y: 369}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -819.7, y: 369.52133}
+  m_SizeDelta: {x: 160, y: 27.1573}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789228409
 MonoBehaviour:
@@ -22268,7 +22268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: "Oops i guess the crown wasnt \neven real..."
+  m_Text: I guess the legend was never real...
 --- !u!114 &1789228410
 MonoBehaviour:
   m_ObjectHideFlags: 0
