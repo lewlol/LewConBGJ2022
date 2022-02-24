@@ -12,7 +12,7 @@ public class FadeIn : MonoBehaviour
 
     IEnumerator TurnOff()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         gameObject.SetActive(false);
     }
 }

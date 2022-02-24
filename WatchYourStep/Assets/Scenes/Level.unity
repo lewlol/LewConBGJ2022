@@ -827,6 +827,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9aae7e2e2be3148866e61816d4beb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reachTop: {fileID: 1966397090}
+  timeTook: {fileID: 255394942}
+  jumpTaken: {fileID: 1197474935}
+  coinsCollected: {fileID: 1075059492}
+  clickToMenu: {fileID: 1349979621}
 --- !u!4 &195317723
 Transform:
   m_ObjectHideFlags: 0
@@ -5922,6 +5927,7 @@ GameObject:
   - component: {fileID: 255394940}
   - component: {fileID: 255394941}
   - component: {fileID: 255394939}
+  - component: {fileID: 255394942}
   m_Layer: 5
   m_Name: TimeTook
   m_TagString: Untagged
@@ -6007,6 +6013,26 @@ MonoBehaviour:
   timeBtwChars: 0.1
   leadingChar: 
   leadingCharBeforeDelay: 0
+--- !u!95 &255394942
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255394937}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e1d6f95d1e4f1d409a629f780220fb3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &266771950
 GameObject:
   m_ObjectHideFlags: 0
@@ -7387,7 +7413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &712238188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9316,6 +9342,7 @@ GameObject:
   - component: {fileID: 1075059491}
   - component: {fileID: 1075059490}
   - component: {fileID: 1075059489}
+  - component: {fileID: 1075059492}
   m_Layer: 5
   m_Name: CoinsCollected
   m_TagString: Untagged
@@ -9401,6 +9428,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075059487}
   m_CullTransparentMesh: 1
+--- !u!95 &1075059492
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075059487}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f69d6350f6472564091104a16319199a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1094093331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9708,6 +9755,7 @@ GameObject:
   - component: {fileID: 1197474933}
   - component: {fileID: 1197474934}
   - component: {fileID: 1197474932}
+  - component: {fileID: 1197474935}
   m_Layer: 5
   m_Name: JumpsTaken
   m_TagString: Untagged
@@ -9795,6 +9843,26 @@ MonoBehaviour:
   timeBtwChars: 0.1
   leadingChar: 
   leadingCharBeforeDelay: 0
+--- !u!95 &1197474935
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197474930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8c463f558319914e8470c3f22be4dc0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1215360262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10657,6 +10725,7 @@ GameObject:
   - component: {fileID: 1349979619}
   - component: {fileID: 1349979620}
   - component: {fileID: 1349979618}
+  - component: {fileID: 1349979621}
   m_Layer: 5
   m_Name: Clicktomenu
   m_TagString: Untagged
@@ -10742,6 +10811,26 @@ MonoBehaviour:
   timeBtwChars: 0.1
   leadingChar: 
   leadingCharBeforeDelay: 0
+--- !u!95 &1349979621
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349979616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f2b63dac4d94f34fbaac28bcf430c2d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1353033790
 GameObject:
   m_ObjectHideFlags: 0
@@ -11211,7 +11300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1401381726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28329,6 +28418,7 @@ GameObject:
   - component: {fileID: 1966397089}
   - component: {fileID: 1966397088}
   - component: {fileID: 1966397087}
+  - component: {fileID: 1966397090}
   m_Layer: 5
   m_Name: ReachedTop
   m_TagString: Untagged
@@ -28417,6 +28507,26 @@ MonoBehaviour:
   timeBtwChars: 0.1
   leadingChar: 
   leadingCharBeforeDelay: 0
+--- !u!95 &1966397090
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966397085}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c7f173493505cb46b448a6c5ceb08b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1983958983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34199,7 +34309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1744762248227053615, guid: a65c9c084ecd2884e8f0c2bd24d392e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.34
+      value: 164.9
       objectReference: {fileID: 0}
     - target: {fileID: 1744762248227053615, guid: a65c9c084ecd2884e8f0c2bd24d392e5, type: 3}
       propertyPath: m_LocalPosition.z

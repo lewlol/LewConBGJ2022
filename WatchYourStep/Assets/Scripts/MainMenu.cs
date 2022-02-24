@@ -35,8 +35,9 @@ public class MainMenu : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         text1.SetActive(true);
+        yield return new WaitForSeconds(5f);
         skiptext.SetActive(true);
-        yield return new WaitForSeconds(13f);
+        yield return new WaitForSeconds(8f);
         text2.SetActive(true);
         yield return new WaitForSeconds(5f);
         text1.SetActive(false);
