@@ -7056,6 +7056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2119650237}
   isPaused: 0
+  othercanvas: {fileID: 169787062}
 --- !u!4 &663192927
 Transform:
   m_ObjectHideFlags: 0
