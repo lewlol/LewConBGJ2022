@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
         maxJumpSpeed = 15.0f;
         minSideSpeed = -10.0f;
         maxSideSpeed = 10.0f;
@@ -40,14 +41,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Jumping
-        if(inAir == false)
+        //Movement
+        if (inAir == false)
         {
             if (Input.GetButton("Jump"))
             {
                 if (JumpSpeed < maxJumpSpeed)
                 {
-                    JumpSpeed += 0.1f;
+                    JumpSpeed += 0.22f;
                     sr.sprite = charge;
                 }
                 if (JumpSpeed >= maxJumpSpeed && resetSpeed == true)
@@ -55,6 +56,38 @@ public class PlayerMovement : MonoBehaviour
                     groundParticles.SetActive(true);
                 }
             }
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (sideSpeed > minSideSpeed)
+                {
+                    sideSpeed -= 0.17f;
+                }
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                if (sideSpeed < maxSideSpeed)
+                {
+                    sideSpeed += 0.17f;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                if (sideSpeed > 0)
+                {
+                    sideSpeed = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                if (sideSpeed < 0)
+                {
+                    sideSpeed = 0;
+                }
+            }
+        }
+        //Jumping
+        if (inAir == false)
+        {
             if (Input.GetButtonUp("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
             {
                 rb.AddForce(new Vector2(sideSpeed, JumpSpeed), ForceMode2D.Impulse);
@@ -66,40 +99,12 @@ public class PlayerMovement : MonoBehaviour
                 audio.clip = jumpSound;
                 audio.Play();
             }
-            if (Input.GetKey(KeyCode.A))
-            {
-                if (sideSpeed > minSideSpeed)
-                {
-                    sideSpeed -= 0.08f;
-                }
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                if (sideSpeed < maxSideSpeed)
-                {
-                    sideSpeed += 0.08f;
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                if(sideSpeed > 0)
-                {
-                    sideSpeed = 0;
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                if(sideSpeed < 0)
-                {
-                    sideSpeed = 0;
-                }
-            }
-
             var movement = Input.GetAxis("Horizontal");
             if (!Mathf.Approximately(0, movement))
             {
                 transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
             }
+
         }
     }
 
