@@ -77,17 +77,17 @@ public class StopTimer : MonoBehaviour
         Congrats.SetActive(true);
 
 
-        yield return new WaitForSeconds(9.3f);
+        yield return new WaitForSeconds(10f);
         Timetaken.SetActive(true);
        
 
-        yield return new WaitForSeconds(5.5f);
+        yield return new WaitForSeconds(5.9f);
         JumpsDone.SetActive(true);
 
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(5.5f);
         CoinsCollected.SetActive(true);
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(5.3f);
         ExitScene.SetActive(true);
         endbutton.SetActive(true);
     }

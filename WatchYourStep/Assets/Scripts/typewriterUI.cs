@@ -14,9 +14,12 @@ public class typewriterUI : MonoBehaviour
 	[SerializeField] string leadingChar = "";
 	[SerializeField] bool leadingCharBeforeDelay = false;
 
+	public AudioSource typing;
+	
+
 	// Use this for initialization
 	void Start()
-	{
+	{ 
 		_text = GetComponent<Text>()!;
 		_tmpProText = GetComponent<TMP_Text>()!;
 
@@ -26,6 +29,8 @@ public class typewriterUI : MonoBehaviour
 			_text.text = "";
 
 			StartCoroutine("TypeWriterText");
+			typing.Play();
+				
 		}
 
 		if (_tmpProText != null)
@@ -34,7 +39,9 @@ public class typewriterUI : MonoBehaviour
 			_tmpProText.text = "";
 
 			StartCoroutine("TypeWriterTMP");
+			typing.Play();	
 		}
+        
 	}
 
 	IEnumerator TypeWriterText()
@@ -53,6 +60,7 @@ public class typewriterUI : MonoBehaviour
 			_text.text += leadingChar;
 			yield return new WaitForSeconds(timeBtwChars);
 		}
+		typing.Stop();
 
 		if (leadingChar != "")
 		{
@@ -76,6 +84,7 @@ public class typewriterUI : MonoBehaviour
 			_tmpProText.text += leadingChar;
 			yield return new WaitForSeconds(timeBtwChars);
 		}
+		typing.Stop();
 
 		if (leadingChar != "")
 		{
